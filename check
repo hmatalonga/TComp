@@ -1,0 +1,36 @@
+#!/bin/bash
+
+pset=$1
+if [[ $pset = "" ]]; then
+    echo "pset not specified!"
+    exit 1
+fi
+if [[ ! -d "$pset" ]]; then
+    echo "$pset not found!"
+    exit 1
+fi
+echo "========= $pset =========="
+tests="$pset/tests/input*"
+i=1
+success=0
+fail=0
+for f in $tests; do
+    result=$(ocamlrun $pset/$pset < $f)
+    if [[ $result = $(cat $pset/tests/result$i) ]]; then
+        echo "$i) OK"
+        ((success++))
+    else
+        echo "$i) FAIL"
+        ((fail++))
+    fi
+    ((i++))
+done
+
+echo "========= RESULT ========="
+if [[ $fail = 0 ]]; then
+    echo "Test suite passed."
+else
+    echo "Test suite failed!"
+fi
+echo "Passed $success tests out of $((success + fail))"
+echo "Failed $fail tests out of $((success + fail))"
