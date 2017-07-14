@@ -1,11 +1,13 @@
-# Theory of Computation
-
-[![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
+# Theory of Computation [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
 
 ## Introduction
-This repository contains Theory of Computation problem sets. It has only academic purpose. It also serves as an introduction to Functional Programming. All problem sets have a `pdf` summary however is written in Portuguese.
-[//]: # ([PsetA](psetA/INTRUCTIONS.md))
-[//]: # ([PsetB](psetB/INTRUCTIONS.md))
+This repository contains Theory of Computation problem sets. It has only academic purpose. It also serves as an introduction to Functional Programming. All problem sets have a `pdf` summary which are written in Portuguese.
+
+## Problem Sets
+- [PsetA](psetA/INTRUCTIONS.md)
+- [PsetB](psetB/INTRUCTIONS.md)
+
+## Usage
 
 ### Install
 The problem sets were made using *OCaml*. I recommend to install it using *OPAM*, use this [link](https://github.com/realworldocaml/book/wiki/Installation-Instructions) to get instructions how to do this. Make sure to install the following packages:
